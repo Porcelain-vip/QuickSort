@@ -1,7 +1,7 @@
 #include<iostream>
 
 template<typename Type>
-void QuickSortHelp(Type * a, int left, int right)
+void QuickSortHelp(Type* a, int left, int right)
 {
 	if (left < right)
 	{
@@ -19,7 +19,7 @@ void QuickSortHelp(Type * a, int left, int right)
 }
 
 template<typename Type>
-void QuickSort(Type * a, int n)
+void QuickSort(Type* a, int n)
 {
 	QuickSortHelp<Type>(a, 0, n - 1);
 }
@@ -29,9 +29,9 @@ int main()
 	using namespace std;
 	int a[10];
 	cout << "Please enter 10 numbers: ";
-	for (auto &value : a) cin >> value;
+	for (int& value : a) cin >> value;
 	QuickSort<int>(a, 10);
 	cout << "Low-to-High: ";
-	for (auto &value : a) cout << value << "   "; cout << endl;
+	for (int& value : a) cout << value << "   "; cout << endl;
 	return 0;
 }
