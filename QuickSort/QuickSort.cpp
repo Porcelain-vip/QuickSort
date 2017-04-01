@@ -5,7 +5,7 @@ void QuickSortHelp(Type* a, int left, int right)
 {
 	if (left < right)
 	{
-		int pivot = left, high = right;                                  //此行拷贝操作很重要`.`
+		int pivot = left, high = right;                                  //此行拷贝操作很重要
 		while (pivot != high)
 		{
 			while (pivot != high && a[pivot] <= a[high]) --high;
